@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { sanitizeUsername, formatStatsLine } from './format'
+import { sanitizeUsername, formatUserStats } from './format'
 
 describe('sanitizeUsername', () => {
   it('trims surrounding whitespace', () => {
@@ -16,9 +16,9 @@ describe('sanitizeUsername', () => {
   })
 })
 
-describe('formatStatsLine', () => {
+describe('formatUserStats', () => {
   it('renders the three stats joined by a middle dot', () => {
-    const line = formatStatsLine({
+    const line = formatUserStats({
       public_repos: 12,
       followers: 34,
       following: 5,
@@ -27,7 +27,7 @@ describe('formatStatsLine', () => {
   })
 
   it('handles zero values', () => {
-    const line = formatStatsLine({
+    const line = formatUserStats({
       public_repos: 0,
       followers: 0,
       following: 0,

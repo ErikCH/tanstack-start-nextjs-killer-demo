@@ -13,7 +13,7 @@ export function sanitizeUsername(input: string): string {
  * Format the small stats line shown under a GitHub user, e.g.
  * "12 repos · 34 followers · 5 following".
  */
-export function formatStatsLine(stats: {
+export function formatUserStats(stats: {
   public_repos: number
   followers: number
   following: number
